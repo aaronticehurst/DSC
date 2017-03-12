@@ -1,4 +1,4 @@
-Configuration SMAWebPrereqs {
+Configuration Install-SMAWebPrereqs {
 
 param (
 [string[]]$Computername
