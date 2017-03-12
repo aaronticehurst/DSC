@@ -1,4 +1,6 @@
 Configuration Install-SMAWebPrereqs {
+#Based this off xSCSMA from PowerShell Gallery, https://www.powershellgallery.com/packages/xSCSMA/1.5.0.0
+#The 1.5.0.0 version has a few issues and I just wanted to at least have something to configure prerequisites for SMA web service.
 
 param (
 [string[]]$Computername
