@@ -1,17 +1,7 @@
 ﻿# A configuration to Create High Availability Domain Controller 
 # You must know the local 'admninistrator' password of the servers to be made into dc's
-# The replca dc's should have their primary dns pointed to the primary dc before beginning so they can discover the new domain
-# All the servers need to have the xActiveDirectory dsc resource module copiued the to c:\Program Files\WindowsPowerShell\Modules folder
-
-
-#$domainCred = Get-Credential -Message "Domain credential" -Username "test.local\Administrator"
-
-
-<#
-$FQDN_Username = join-path -Path $config.DomainData.DomainName -ChildPath $config.DomainData.LocalAdministrator
-$secpasswd = ConvertTo-SecureString "P@ssword01" -AsPlainText -Force
-$domainCred = $safemodeAdministratorCred = New-Object System.Management.Automation.PSCredential ($FQDN_Username, $secpasswd)
-#>
+# The replica dc's should have their primary dns pointed to the primary dc before beginning so they can discover the new domain
+# All the servers need to have the xActiveDirectory dsc resource module copied the to c:\Program Files\WindowsPowerShell\Modules folder
 
 
 configuration NewDomain
