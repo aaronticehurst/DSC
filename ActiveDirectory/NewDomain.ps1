@@ -6,13 +6,13 @@
 
 configuration NewDomain
 {
-[cmdletbinding()]
-param([parameter(Mandatory = $false,
-        ValueFromPipelineByPropertyName = $true,
-        ValueFromPipeline = $true,
-        Position = 0)]
-    [pscredential]$Credential
-)
+    [cmdletbinding()]
+    param([parameter(Mandatory = $false,
+            ValueFromPipelineByPropertyName = $true,
+            ValueFromPipeline = $true,
+            Position = 0)]
+        [pscredential]$Credential
+    )
 
     Import-DscResource -ModuleName xActiveDirectory
     Import-DSCResource -ModuleName xNetworking
