@@ -83,7 +83,7 @@ NewDomain -configurationData $config -Credential $Credential
 Set-DSCLocalConfigurationManager -Path $PSScriptRoot\NewDomain -Verbose -Credential $Credential 
 Start-DscConfiguration -Wait -Force -Verbose -Path $PSScriptRoot\NewDomain -Credential $Credential 
 
-#Joing members to domain
+#Join members to domain
 If ($Config.AllNodes | Where-Object {$_.role -eq "Member"}) {
     . .\JoinMemberToDomain.ps1
     JoinMemberToDomain -configurationData $Config -Credential $Credential
